@@ -1,0 +1,37 @@
+<table *ngIf="candidates?.length">
+  <thead>
+  <td>First name</td>
+  <td>Last name</td>
+  <td>Date of birth</td>
+  <td>Gender</td>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let candidate of candidates">
+    <td>{{candidate.firstName}}</td>
+    <td>{{candidate.lastName}}</td>
+    <td>{{candidate.dob}}</td>
+    <td>{{candidate.gender}}</td>
+  </tr>
+  </tbody>
+  <button (click)="submitData(candidates)">Submit</button>
+    <p>{{message}}</p>
+</table>
+
+<table *ngIf="importedErrors?.length">
+  <thead>
+  <tr>
+    <td>Sheet</td>
+    <td>Address</td>
+    <td>Detail</td>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let importError of importedErrors">
+    <td>{{importError.sheet}}</td>
+    <td>{{importError.address}}</td>
+    <td>{{importError.detail}}</td>
+  </tr>
+  </tbody>
+</table>
