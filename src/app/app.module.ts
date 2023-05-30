@@ -7,12 +7,14 @@ import { CandidateTableComponent } from './components/candidate-table/candidate-
 import {HttpClientModule} from '@angular/common/http';
 import { CandidateImportComponent } from './components/candidate-import/candidate-import.component';
 import {FormsModule} from '@angular/forms';
+import { CandidateExportComponent } from './components/candidate-export/candidate-export.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidateTableComponent,
-    CandidateImportComponent
+    CandidateImportComponent,
+    CandidateExportComponent
   ],
   imports: [
     BrowserModule,
